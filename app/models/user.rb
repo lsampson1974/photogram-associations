@@ -70,7 +70,7 @@ class User < ApplicationRecord
   # User#discover: returns rows from the photos table associated to this user through its leaders (the leaders' liked_photos)
   has_many(:discover, through: :leader_liked_photos, source: :liked_photos)
 
-
+=begin
   def comments
     my_id = self.id
 
@@ -220,4 +220,6 @@ class User < ApplicationRecord
 
     return matching_photos
   end
+
+=end
 end
